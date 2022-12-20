@@ -1,0 +1,146 @@
+.myl-comment
+  &-item
+    display: flex
+    padding: 20px 0
+    @media screen and (max-width: $xs-max)
+      flex-direction: column
+    &__user
+      width: 60px
+      margin-right: 20px
+      @media screen and (max-width: $xs-max)
+        margin: 0 0 10px 0
+      a
+        @include link-reset
+    &__body
+      width: 0
+      flex-grow: 1
+      @media screen and (max-width: $xs-max)
+        flex-grow: 0
+        width: 100%
+    &__header
+      @include flex-center
+      margin-bottom: 11px
+      @media screen and (max-width: $xs-max)
+        flex-direction: column
+        align-items: flex-start
+
+    &__fullname
+      @include text-14-17
+      font-weight: 600
+      color: $black
+      margin: 0
+      a
+        @include link-reset
+        transition: color $td
+        &:hover
+          color: $blue-link
+    &__department
+      font-family: $main-font
+      font-size: 13px
+      line-height: 17px
+      color: $grey
+      font-weight: 400
+      margin: 0 0 0 10px
+      @media screen and (max-width: $xs-max)
+        margin: 2px 0 0 0
+    &__author
+      background: $orange-light
+      border-radius: 20px
+      height: 20px
+      display: inline-flex
+      align-items: center
+      padding: 0 8px
+      font-family: $main-font
+      font-size: 13px
+      line-height: 17px
+      font-weight: 500
+      color: $orange
+      margin: 0 0 0 10px
+    &__text
+      @include text-14-17
+      line-height: 20px
+      color: $black2
+      overflow: hidden
+      a
+        &,
+        &:link,
+        &:visited,
+        &:focus,
+        &:hover
+          @include text-14-17
+          line-height: inherit
+          font-weight: 500
+          color: $blue-link
+        &:hover
+          text-decoration: underline
+      ul
+        li
+          &,
+          &:not([class])
+            list-style-type: disc
+            list-style-position: inside
+      ol
+        li
+          &,
+          &:not([class])
+            list-style-type: decimal
+            list-style-position: inside
+      img
+        &,
+        .feed .article &
+          max-width: 100%
+          height: auto
+          width: auto !important
+          margin: 0 !important
+          max-height: 700px !important
+      .myl-comment-item__response-user-link
+        & + ul,
+        & + ol
+          clear: both
+      & > *:not(.myl-comment-item__response-user-link) + *
+        margin-top: 10px
+    &__footer
+      @include flex-center
+      margin-top: 15px
+      @media screen and (max-width: $xs-max)
+        flex-wrap: wrap
+    &__likes
+      @include flex-center
+      margin-right: 13px
+    &__date
+      @include text-14-17
+      color: $grey
+      white-space: nowrap
+      margin: 0 13px
+    &__reply
+      margin: 0 13px
+      @media screen and (max-width: $xs-max)
+        margin: 0 0 0 13px
+    &__actions
+      @include flex-center
+      margin-left: auto
+      transition: opacity $td
+      opacity: 0
+      @media screen and (max-width: $xs-max)
+        justify-content: flex-end
+        width: 100%
+        margin: 20px 0 0
+        opacity: 1
+      .myl-comment-button-action + .myl-comment-button-action
+        margin-left: 10px
+      .myl-comment-item:hover &
+        opacity: 1
+    &__replies-toggler
+      cursor: pointer
+      @include flex-center
+      margin-top: 15px
+      .svg
+        height: 24px
+        width: 24px
+      span
+        @include text-14-17
+        color: $black
+        margin-left: 6px
+    &__response-user-link
+      float: left
+      margin-right: 10px

@@ -1,0 +1,41 @@
+.account-item
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__pic
+    height: 50px
+    width: 50px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 50%
+    background: #eee
+
+  img
+    &,
+    .feed .article &
+      height: 50px
+      width: 50px
+      border-radius: 50%
+      margin: 0
+      object-fit: cover
+
+  p,
+  &__name
+    font-family: $main-font
+    font-size: 13px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 16px
+    letter-spacing: normal
+    text-align: center
+    color: $black
+    margin-top: 9px
+    transition: color $td
+
+  &:hover p
+    color: $blue-link

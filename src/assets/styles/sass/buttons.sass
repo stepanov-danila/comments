@@ -1,0 +1,42 @@
+.myl-comment
+  &-button
+    &-link
+      display: inline-flex
+      @include text-14-17
+      color: $blue-link
+      border-bottom: 1px dashed currentColor
+      cursor: pointer
+      transition: border-color $td
+      &:hover
+        border-bottom-color: transparent
+      &[data-disabled="true"]
+        &,
+        &:hover
+          color: $grey
+          pointer-events: none
+    &-submit
+      height: 30px
+      padding: 0 10px
+      @include flex-center
+      background: $orange
+      border-radius: 6px
+      @include btn-14-18
+      letter-spacing: normal
+      text-transform: uppercase
+      color: $white
+      cursor: pointer
+      transition: background $td
+      &:hover
+        background: $orange-dark
+    &-action
+      @include flex-center
+      justify-content: center
+      width: 30px
+      height: 30px
+      background: $white
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12)
+      border-radius: 30px
+      cursor: pointer
+      .svg
+        width: 14px
+        height: 14px

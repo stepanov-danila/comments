@@ -1,0 +1,29 @@
+.myl-comment
+  &-list
+    display: block
+    margin: 0
+    padding: 0
+    list-style: none
+    &__item
+      list-style: none
+      @media screen and (max-width: $xs-max)
+        overflow: auto
+      [data-root="true"] > &
+        padding: 10px 0
+        &:not(:last-child)
+          border-bottom: 1px solid #E3E2E2
+      .myl-comment-list
+        margin-left: 85px
+        @media screen and (max-width: $xs-max)
+          margin-left: 40px
+          min-width: 320px
+        .myl-comment-list__item
+          @media screen and (max-width: $xs-max)
+            overflow: visible
+        .myl-comment-item
+        .myl-comment-list
+
+          .myl-comment-list
+            .myl-comment-list
+              .myl-comment-list
+                margin-left: 0

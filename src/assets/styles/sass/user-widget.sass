@@ -1,0 +1,45 @@
+.myl-comment
+  &-user-widget
+    height: 60px
+    width: 60px
+    position: relative
+    &__avatar
+      height: 60px
+      width: 60px
+      border-radius: 50%
+      overflow: hidden
+      background: #eee
+      img
+        &,
+        .feed .article &
+          height: 100%
+          width: 100%
+          object-fit: cover
+          margin: 0
+    &__presense
+      height: 18px
+      width: 18px
+      border-radius: 50%
+      border: 3px solid $white
+      position: absolute
+      bottom: 0
+      right: 0
+      &:before
+        content: ''
+        display: flex
+        height: 100%
+        width: 100%
+        border-radius: 50%
+        border: 1px solid
+      &[data-status="online"]:before
+        background: $green
+        border-color: $green
+      &[data-status="no-data"]:before
+        background: #adadad
+        border-color: #adadad
+      &[data-status="away"]:before
+        background: $white
+        border-color: #adadad
+      &[data-status="was-recently"]:before
+        background: $orange
+        border-color: $orange

@@ -1,0 +1,65 @@
+.popup-box
+  display: none
+
+  &__bg
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: 1000
+
+  &__content
+    box-shadow: 0px 1px 25px 0 $grey
+    background-color: $white
+    position: absolute
+    z-index: 1100
+    padding: 10px
+    border-radius: 5px
+
+  &__dropdown
+    &-list
+      padding: 0
+      margin: 0
+      list-style: none
+      list-style-image: none
+      & &-item
+        font-family: $main-font
+        font-size: 13px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 24px
+        letter-spacing: normal
+        text-align: left
+        color: $black
+        white-space: nowrap
+        a
+          @include link-reset
+          &:hover
+            text-decoration: underline
+          & + a
+            margin-top: 15px
+      &-divider
+        height: 1px
+        width: 100%
+        background: $grey
+        margin: 12px 0
+
+  &[data-mode="feed-card-likes"]
+    @media screen and (max-width: 1023px)
+      display: none !important
+    &:hover
+      display: block !important
+    .popup-box
+      &__bg
+        display: none
+      &__content
+        bottom: 100%
+        left: 50%
+        transform: translateX(-50%)
+        padding: 0 20px
+        @media screen and (max-width: 1500px)
+          transform: translateX(0)
+          left: -10px
+          bottom: 50px

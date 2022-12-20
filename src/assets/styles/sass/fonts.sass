@@ -1,0 +1,56 @@
+// @font-face
+//  font-family: 'Fira Sans'
+//  src: url('../../fonts/FiraSans-Regular.ttf')
+//  font-weight: normal
+//  font-style: normal
+// @font-face
+//   font-family: 'Fira Sans'
+//   src: url('../../fonts/FiraSans-Bold.ttf')
+//   font-weight: bold
+//   font-style: normal
+
+@font-face
+  font-family: 'comment-editor-font'
+  src: url('../../fonts/comment-editor-font/comment-editor-font.eot?50047114')
+  src: url('../../fonts/comment-editor-font/comment-editor-font.eot?50047114#iefix') format("embedded-opentype"), url('../../fonts/comment-editor-font/comment-editor-font.woff2?50047114') format("woff2"), url('../../fonts/comment-editor-font/comment-editor-font.woff?50047114') format("woff"), url('../../fonts/comment-editor-font/comment-editor-font.ttf?50047114') format("truetype")
+  font-weight: normal
+  font-style: normal
+
+[class^="comment-editor-font comment-editor-font-"]:before, [class*=" comment-editor-font comment-editor-font-"]:before
+  font-family: "comment-editor-font"
+  font-style: normal
+  font-weight: normal
+  speak: never
+  display: inline-block
+  text-decoration: inherit
+  text-align: center
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.comment-editor-font
+  &-bullet-list:before
+    content: '\e800'
+
+  &-image:before
+    content: '\e801'
+
+  &-italic:before
+    content: '\e802'
+
+  &-likes:before
+    content: '\e803'
+
+  &-link:before
+    content: '\e804'
+
+  &-order-list:before
+    content: '\e805'
+
+  &-bold:before
+    content: '\e806'

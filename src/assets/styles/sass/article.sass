@@ -1,0 +1,23 @@
+.myl-article
+  &-info-counts
+    @include flex-center
+    margin: 30px 0
+    &__item
+      @include flex-center
+      color: $grey
+      &:not(:last-child)
+        margin-right: 20px
+
+      & > .font-icon,
+      & > p
+        color: inherit
+
+      & > .font-icon
+        font-size: 12px
+        margin-right: 4px
+
+      & > p
+        font-family: $main-font
+        font-size: 13px
+        line-height: 1
+        font-weight: 400

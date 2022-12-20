@@ -1,0 +1,38 @@
+.myl-comments-section
+  display: block
+  position: relative
+  clear: both
+  &__head
+    @include flex-center
+    height: 100px
+    border-bottom: 1px solid $grey-line
+    @media screen and (max-width: $xs-max)
+      flex-wrap: wrap
+  &__toggler
+    height: 20px
+    width: 20px
+    @include flex-center
+    justify-content: center
+    margin-right: 10px
+    cursor: pointer
+    transition: transform $td
+    &[data-expanded="false"]
+      transform: rotateX(180deg)
+  &__count
+    font-family: $main-font
+    font-style: normal
+    font-weight: 700
+    font-size: 17px
+    line-height: 20px
+    text-transform: uppercase
+    color: $black2
+    margin: 0
+  &__expand
+    margin-left: auto
+    @media screen and (max-width: $xs-max)
+      width: 100%
+      margin: 5px 0 0 0
+  &__editor
+    padding-bottom: 30px
+  &__body
+    border-top: 1px solid $grey-line

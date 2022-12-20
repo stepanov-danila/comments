@@ -1,0 +1,36 @@
+@mixin flex-center
+  display: flex
+  align-items: center
+
+@mixin text-14-17
+  font-family: $main-font
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 17px
+
+@mixin btn-14-18
+  font-family: $main-font
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 18px
+
+@mixin font-inherit
+  font-family: inherit
+  font-style: inherit
+  font-weight: inherit
+  font-size: inherit
+  line-height: inherit
+  letter-spacing: inherit
+
+@mixin link-reset
+  &,
+  &:link,
+  &:visited,
+  &:focus,
+  &:active,
+  &:hover
+    @include font-inherit
+    color: inherit
+    text-decoration: inherit
